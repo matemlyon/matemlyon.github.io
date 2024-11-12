@@ -13,75 +13,122 @@ body {
 header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 20px;
 }
 
-header .logo {
-    font-size: 1.5rem;
+header .logo h3{
+   margin-right: 10px;
+}
+
+header .logo img {
+    width: 50px; 
+    height: auto;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
 }
 
 header nav a {
-    margin: 0 15px;
     text-decoration: none;
     color: blue;
-    justify-content: flex-end;
 }
 
 .intro {
-    text-align: center;
-    padding: 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-.intro h1 {
-    font-size: 2.5rem;
+.intro-content {
+    background-color: #f9f9f9;  
+    padding: 20px;
+    border-radius: 8px; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
 }
 
-.intro h2 {
+.intro-content h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.intro-content h2{
     font-size: 1.5rem;
     color: #555;
-    margin: 10px 0;
+    margin bottom: 15px;
 }
 
-.intro p {
+.intro-content p {
     font-size: 1rem;
-    max-width: 600px;
-    margin: 20px auto;
     line-height: 1.6;
+    margin-bottom: 20px
 }
 
-.intro button {
+.intro-content button {
     padding: 10px 20px;
     font-size: 1rem;
     background-color: blueviolet;
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 4px;
 }
 
-.skills {
+.intro button a {
+    color: white;
+    text-decoration: none;
+}
+
+.intro-content button:hover {
+    background-color: darkblue;
+}
+
+.intro-image img {
+    max-width: 300px; 
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+}
+#skills {
     display: flex;
-    justify-content: space-around;
-    padding: 40px 20px;
+    flex-wrap: wrap; 
+    gap: 20px; 
     background-color: #fff;
+    justify-content: space-between; 
 }
 
 .skill {
+    flex: 1 1 30%; 
     text-align: center;
-    max-width: 200px;
+    min-width: 250px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.skill .icon {
-    width: 60px;
-    height: 60px;
+
+.icon {
+    width: 50px;
+    height: 50px;
     background-color: #333;
+    border-radius: 50%;
     margin: 0 auto 15px;
 }
-
-.skill h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
+    
 .portfolio {
     padding: 40px 20px;
     text-align: center;
