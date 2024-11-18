@@ -12,18 +12,27 @@ body {
 
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 20px;
+    position: relative;
 }
 
-header .logo h3{
-   margin-right: 10px;
+header .logo {
+  position: absolute;
+  left: 20px;
+}
+
+header nav {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
 }
 
 header .logo img {
     width: 50px; 
     height: auto;
+    border-radius: 100%;
 }
 
 header nav ul {
@@ -33,6 +42,10 @@ header nav ul {
     margin: 0;
 }
 
+header nav ul li {
+    margin: 0 15px;
+}
+
 nav ul li:last-child {
     margin-right: 0;
 }
@@ -40,6 +53,12 @@ nav ul li:last-child {
 header nav a {
     text-decoration: none;
     color: blue;
+    font-weight: bold;
+    transition color: 0.3s;
+}
+
+header nav a:hover {
+    color: darkblue; 
 }
 
 .intro {
@@ -136,9 +155,10 @@ header nav a {
 
 .portfolio h2 {
     margin-bottom: 20px;
-    font-size: 1.8rem;
+    font-size: 1.8
 }
-
+ h2{color: red;}
+ 
 .projects {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -156,20 +176,38 @@ header nav a {
     height: auto;
 }
 
-.testimonials {
+#testimonials {
     padding: 40px 20px;
     text-align: center;
     background-color: #fff;
 }
 
-.testimonials h2 {
+#testimonials h2 {
     font-size: 1.8rem;
     margin-bottom: 20px;
 }
 
+.testimonials-container {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-around; 
+    gap: 20px; 
+}
+
 .testimonial {
-    max-width: 300px;
-    margin: 0 auto 20px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left; 
+    flex: 1 1 300px; 
+    max-width: 300px; 
+}
+
+.rating {
+    color: #FFD700;
+    font-size: 1.2rem; 
+    margin-bottom: 10px;
 }
 
 .testimonial p {
@@ -180,6 +218,7 @@ header nav a {
 .author {
     display: flex;
     align-items: center;
+    margin-top: 15px;
 }
 
 .author img {
