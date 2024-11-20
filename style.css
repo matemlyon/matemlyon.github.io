@@ -85,11 +85,36 @@ header nav a:hover {
 }
 
 .intro-content h2{
-    font-size: 1.5rem;
-    color: #555;
+    font-size: 2rem;
+    color: darkblue;
     margin-bottom: 15px;
 }
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
 
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.animated-text {
+    display: inline-block;
+    font-family: Arial, sans-serif;
+    font-size: 1.5rem;
+    color: #555;
+    border-right: 2px solid #555;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 3s steps(15, end) forwards, blink 0.7s step-end infinite;
+}
 .intro-content p {
     font-size: 1rem;
     line-height: 1.6;
@@ -113,6 +138,48 @@ header nav a:hover {
 
 .intro-content button:hover {
     background-color: darkblue;
+}
+
+.contact-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-button a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(106, 95, 95, 0.3), rgba(255, 255, 255, 0.1));
+    z-index: 0;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+}
+
+.contact-button:hover {
+    transform: scale(1.1);
+    background-color: darkblue;
+}
+
+.contact-button:hover::before {
+    transform: translateX(0);
 }
 
 .intro-image img {
@@ -175,7 +242,26 @@ header nav a:hover {
     width: 100%;
     height: auto;
 }
+.project a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+.project a:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project img {
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.project a:hover img {
+    transform: scale(1.1);
+}
 #testimonials {
     padding: 40px 20px;
     text-align: center;
@@ -190,24 +276,33 @@ header nav a:hover {
 .testimonials-container {
     display: flex; 
     flex-wrap: wrap; 
-    justify-content: space-around; 
-    gap: 20px; 
+    justify-content:center; 
+    gap: 75px; 
 }
 
 .testimonial {
-    background-color: #f9f9f9;
+    background-color: turquoise;
+    color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left; 
     flex: 1 1 300px; 
     max-width: 300px; 
+    transition: transform 0.3s ease;
 }
 
-.rating {
-    color: #FFD700;
+.testimonial:hover {
+    transform: scale(1.05); /* Légère animation au survol */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Plus d'ombre au survol */
+}
+
+
+.testimonial .rating {
+    color: #FFD700; 
     font-size: 1.2rem; 
-    margin-bottom: 10px;
+    margin: 10px 0; 
+    text-align: center; 
 }
 
 .testimonial p {
@@ -227,6 +322,8 @@ header nav a:hover {
     border-radius: 50%;
     margin-right: 10px;
 }
+
+
 
 footer {
     padding: 40px 20px;
@@ -259,3 +356,78 @@ footer button {
     color: blueviolet;
     text-decoration: none;
 }
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    header .logo {
+        margin-bottom: 10px; 
+    }
+
+    nav ul {
+        flex-direction: column; 
+        gap: 10px; 
+    }
+
+    .intro {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .intro-image img {
+        max-width: 100%;
+    }
+
+    #skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        background-color: #f0f8ff;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .skill {
+        flex: 1 1 calc(33% - 20px);
+        min-width: 250px;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .projects {
+        grid-template-columns: repeat(1, 1fr); 
+    }
+
+    #testimonials .testimonials-container {
+        flex-direction: column; 
+        gap: 30px; 
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    footer .social-icons a {
+        display: block; 
+        margin-bottom: 10px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .intro-content {
+        padding: 10px; 
+    }
+
+    .contact-button {
+        width: 100%; 
+    }
