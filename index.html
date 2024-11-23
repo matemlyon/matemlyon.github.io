@@ -8,6 +8,46 @@
     <link rel="stylesheet" href="style-desktop.css">
     <link rel="stylesheet" href="style-mobile.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Flèche Scroll</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            height: 2000px; /* Pour tester le défilement */
+            margin: 0;
+        }
+
+        .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .scroll-top:hover {
+            background-color: #007bff;
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .scroll-top.hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body>
    <header>
@@ -30,8 +70,10 @@
     <h2><span class="animated-text">Développeuse Web</span></h2>
     <p>Je suis Mathilde Saker, créative et curieuse Forte d'une expérience de plusieurs années dans la vente, Actuellement en formation de développement Web, je maîtrise les outils de création comme html, CSS, Java Script et Figma pour concevoir des interfaces engageantes. Passionnée par l’innovation et l’expérience utilisateur, je cherche à collaborer avec des entreprises visionnaires, notamment dans les secteurs de la technologie durable et de l’éducation numérique. Actuellement, je continue de me former sur les nouvelles tendances et techniques de design afin de toujours offrir des solutions de qualité."</p>
     
-    <button class="contact-button"><a href="#">Me contacter</a></button>
-    
+    <button class="contact-button">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ton-adresse@email.com" target="_blank" rel="noopener noreferrer">
+            Me contacter
+        </a>
     
     </div>
     <div class="intro-image">
@@ -87,9 +129,10 @@
                 </a>
             </div>
             <div class="project">
-                <img src="https://www.sanrei.co.jp/wp-content/uploads/company-history-head-830x440.jpg" alt="Project 3">
-                <h3>Project title</h3>
-                <p></p>
+                <a href="#">
+                <img src="https://www.sanrei.co.jp/wp-content/uploads/company-history-head-830x440.jpg" alt="Project 3" class="special-hover">
+                <h3>Velvet Time</h3>
+            </a>
             </div>
            
             </div>
@@ -107,7 +150,7 @@
             <div class="author">
                 <img src="client1.jpg" alt="Client 1">
                 <div>
-                    <h4>Marie L.</h4>
+                    <h4>Maud L.</h4>
                     <p>entrepreneuse dans le bien-être/ Entreprise</p>
                 </div>
             </div>
@@ -123,9 +166,20 @@
                     <h4>Nathalie S.</h4>
                     <p>fondatrice d'une boutique en ligne/ Entreprise</p>
                 </div>
-                
-            </div>
-        </div>
+
+                <div class="testimonial">
+                    <p>Mathilde a joué un rôle crucial dans la refonte de mon blog personnel. Son sens du détail et son écoute ont permis de transformer mon site en une plateforme moderne et intuitive. Elle a également été force de proposition sur des idées auxquelles je n'avais pas pensé. Une expérience fluide et un résultat remarquable !</p>
+                    <div class="rating">
+                        ★★★★★
+                    </div>
+                    <div class="author">
+                        <img src="client3.jpg" alt="Client 3">
+                        <div>
+                            <h4>Mathieu G.</h4>
+                            <p>Blogger et consultant en freelance</p>
+                        </div>
+                    </div>
+            
     </section>
     
     <footer>
@@ -134,8 +188,12 @@
                <h2>Travaillons ensemble !</h2>
                <p>Vous avez une idée à concrétiser ? Je suis là pour créer des solutions qui font la différence. Contactez-moi et lançons votre projet dès maintenant !</p>
             </div>
-            <button class="contact-footer-button">Me contacter</button>
-    </div>
+            <button class="contact-footer-button">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ton-adresse@email.com" target="_blank" rel="noopener noreferrer">
+                    Me contacter
+                </a>
+                </div>
+             </button>
 
         <div class="social-icons">
             <a href="#">Discord</a>
@@ -144,6 +202,30 @@
             <a href="#">Behance</a>
         </div>
     </footer>
+
+    <a href="#" class="scroll-top hidden">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+    <a href="#" class="scroll-top hidden">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script>
+        const scrollTopButton = document.querySelector('.scroll-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 200) {
+                scrollTopButton.classList.remove('hidden');
+            } else {
+                scrollTopButton.classList.add('hidden');
+            }
+        });
+
+        scrollTopButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
 </body>
 </html>
 
