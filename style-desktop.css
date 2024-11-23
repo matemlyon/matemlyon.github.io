@@ -219,7 +219,7 @@ header nav a:hover {
     margin-bottom: 20px;
     font-size: 1.8
 }
- h2{color: red;}
+ h2{color: black}
  
  .projects {
     display: flex; 
@@ -277,52 +277,47 @@ header nav a:hover {
 }
 
 #testimonials h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 30px;
 }
 
 .testimonials-container {
     display: flex; 
+    flex-wrap: wrap; 
     justify-content: center; 
     gap: 20px; 
-    flex-wrap: wrap; 
 }
 
 
 .testimonial {
-    background-color: pink;
-    color: #fff;
+    background-color: white;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px; 
     text-align: left; 
-    transition: transform 0.3s ease; box-shadow 0.3 ease;
-    width: 30%; 
-    min-width: 250px; 
+    transition: transform 0.3s ease;
 }
-}
+
 
 .testimonial:hover {
-    transform: scale(1.05); 
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); 
+    transform: translateY(-5px);
 }
 
 
-.testimonial .rating {
-    color: #FFD700; 
+.rating {
     font-size: 1.2rem; 
+    color: #FFD700; 
     margin: 10px 0; 
     text-align: center; 
 }
 
-.testimonial p {
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-}
 
 .author {
     display: flex;
     align-items: center;
+    gap: 15px;
     margin-top: 15px;
 }
 
@@ -330,23 +325,30 @@ header nav a:hover {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    margin-right: 10px;
+    object-fit: cover;
 }
+
 .author h4 {
     margin: 0;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
 }
 
 .author p {
     margin: 0;
     font-size: 0.85rem;
+    color: #555;
 }
 
+@media (max-width: 768px) {
+    .testimonials-container {
+        flex-direction: column;
+    }
+}
 
 footer {
     padding: 40px 20px;
-    background-color: violet;
-    color: white;
+    background-color: whitesmoke;
 }
 
 .footer-content {
@@ -359,6 +361,7 @@ footer {
 .footer-text {
     max-width: 600px;
     text-align: left; 
+    color: black;
 }
 
 footer h2 {
