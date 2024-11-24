@@ -429,7 +429,8 @@ footer {
 .footer-text {
     max-width: 600px;
     text-align: left; 
-    color: blue;
+    color: black;
+    font-weight: bold;
 }
 
 footer h2 {
@@ -463,8 +464,19 @@ footer h2 {
 
 
 .social-icons a {
-    margin: 20px;
-    color: blue;
-    text-align: center;
+    margin: 0 10px; 
+    color: blue; 
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+    font-size: 1rem;
+}
+
+.social-icons a i {
+    font-size: 1.2rem; 
+}
+
+.social-icons a:hover {
+    color: darkblue; 
 }
