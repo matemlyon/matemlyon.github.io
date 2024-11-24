@@ -210,20 +210,20 @@ header nav a:hover {
   }
   
   .skills-grid {
-    display: flex; /* Affiche les éléments en ligne */
-    gap: 2rem; /* Espacement entre les éléments */
-    overflow-x: auto; /* Permet de faire défiler horizontalement */
-    scroll-snap-type: x mandatory; /* Fixe l'alignement du défilement */
-    padding-bottom: 1rem; /* Pour éviter le chevauchement */
-    animation: scrollSkills 20s linear infinite; /* Animation de défilement horizontal */
+    display: flex; 
+    gap: 2rem; 
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; 
+    padding-bottom: 1rem; 
+    animation: scrollSkills 20s linear infinite; 
 }
 
 @keyframes scrollSkills {
     0% {
-        transform: translateX(0); /* Commence à la position initiale */
+        transform: translateX(0); 
     }
     100% {
-        transform: translateX(-100%); /* Déplace le contenu à gauche */
+        transform: translateX(-100%); 
     }
 }
   
@@ -234,7 +234,7 @@ header nav a:hover {
     padding: 2rem;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
-    scroll-snap-align: start; /* Fixe l'alignement au début de chaque élément */
+    scroll-snap-align: start; 
   }
   
   .skill-card:hover {
