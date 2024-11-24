@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,9 +56,9 @@
 </div>
 <nav>
     <ul>
-        <li><a href="#">À propos</a></li>
-        <li><a href="#">Réalisations</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="projects.html">Réalisations</a></li>
+        <li><a href="contact.html">Contact</a></li>
         
     </ul>
 </nav>
@@ -77,42 +77,39 @@
     
     </div>
     <div class="intro-image">
-        <img src="https://via.placeholder.com/300" alt="Image de Mathilde Saker">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.8VhW0fLCqheg4popDYXMXgHaJ4?w=236&h=315&c=7&o=5&dpr=1.5&pid=1.20" alt="Image de Mathilde Saker">
      </div>
 </section>
 
-<section id="skills">
-    <div class="skill">
-        <div class="icon"></div>
-        <h3>HTML</h3>
-        <p>Structuration efficace du contenu des sites web avec une maîtrise solide des bases d'HTML.</p>
+<section id="skills" class="skills-section">
+    <h2 class="skills-title">Mes Compétences</h2>
+    <p class="skills-description">
+      Maîtrisez votre projet grâce à une expertise technique et des solutions sur mesure. Voici un aperçu de mes compétences clés.
+    </p>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <i class="skill-icon fa fa-code"></i>
+        <h3 class="skill-name">Développement Web</h3>
+        <p class="skill-text">Création de sites modernes et performants.</p>
+      </div>
+      <div class="skill-card">
+        <i class="skill-icon fa fa-paint-brush"></i>
+        <h3 class="skill-name">Design UI/UX</h3>
+        <p class="skill-text">Des interfaces intuitives et esthétiques.</p>
+      </div>
+      <div class="skill-card">
+        <i class="skill-icon fa fa-cogs"></i>
+        <h3 class="skill-name">Automatisation</h3>
+        <p class="skill-text">Optimisation des flux de travail par la tech.</p>
+      </div>
+      <div class="skill-card">
+        <i class="skill-icon fa fa-chart-line"></i>
+        <h3 class="skill-name">SEO & créativité</h3>
+        <p class="skill-text">Visibilité accrue pour vos projets en ligne.</p>
+      </div>
     </div>
-    <div class="skill">
-        <div class="icon"></div>
-        <h3>CSS</h3>
-        <p>Création de designs modernes et adaptatifs pour un rendu visuel optimal des pages web.</p>
-    </div>
-    <div class="skill">
-        <div class="icon"></div>
-        <h3>ésprit pédagogiques</h3>
-        <p>Simplification des concepts techniques pour les rendre accessibles à tous.</p>    
-    </div>
-    <div class="skill">
-        <div class="icon"></div>
-        <h3>Java Script</h3>
-        <p>Forte d'une maîtrise des fondamentaux en JavaScript, je suis capable de concevoir et d'optimiser des sites web interactifs et dynamiques. Grâce à mon approche axée sur les besoins clients, je m’assure de proposer des solutions sur mesure, performantes et adaptées à chaque projet</p>
-    </div>
-    <div class="skill">
-        <div class="icon"></div>
-        <h3>Créativité</h3>
-        <p>Proposition de designs uniques et solutions originales qui captent l’attention.</p>
-    </div>
-    <div class="skill">
-        <div class="icon"></div>
-        <h3>Adaptabilité</h3>
-        <p>Capacité à m’ajuster aux besoins de chaque projet pour livrer des résultats sur-mesure.</p>
-    </div>
-    </section>
+  </section>
+
     <section class="portfolio">
         <h2>Mes dernières réalisations</h2>
         <div class="projects">
@@ -182,14 +179,14 @@
         <div class="footer-content">
             <div class="footer-text">
                <h2></h2>
-               <p>Vous avez une idée à concrétiser ? Je suis là pour créer des solutions qui font la différence. Contactez-moi et lançons votre projet dès maintenant !</p>
+               <p>Vous avez une vision à réaliser ? Ensemble, donnons forme à vos idées avec des solutions innovantes et impactantes. Contactez-moi dès aujourd'hui pour concrétiser votre projet !</p>
             </div>
+
             <button class="contact-footer-button">
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ton-adresse@email.com" target="_blank" rel="noopener noreferrer">
                     Me contacter
                 </a>
-                </div>
-             </button>
+            </button>
 
         <div class="social-icons">
             <a href="#">Discord</a>
@@ -197,12 +194,12 @@
             <a href="#">Dribbble</a>
             <a href="#">Behance</a>
         </div>
+        
     </footer>
 
     <a href="#" class="scroll-top hidden">
         <i class="fas fa-chevron-up"></i>
     </a>
-
 
     <script>
         const scrollTopButton = document.querySelector('.scroll-top');
